@@ -1,14 +1,10 @@
-Total jokes:5
-One of them:
-Milk is also the fastest liquid on earth ¡V its pasteurized before you even see it
+2022/02/20 17:42:36
 Total jokes:12
-One of them:
-Me: If humans lose the ability to hear high frequency volumes as they get older, can my 4 week old son hear a dog whistle?
-
-Doctor: No, humans can never hear that high of a frequency no matter what age they are.
-
-Me: Trick question... dogs can't whistle.
-Total jokes:10
-One of them:
-What do you call a group of disorganized cats? A cat-tastrophe.
-Search[weather]:No joke here
+One of [dog]'s joke:
+What did the Zen Buddist say to the hotdog vendor? Make me one with everything.
+2022/02/20 17:42:46
+Total jokes:5
+One of [test]'s joke:
+Why are oranges the smartest fruit? Because they are made to concentrate. 
+2022/02/20 17:42:57
+No [weather]'s joke here!

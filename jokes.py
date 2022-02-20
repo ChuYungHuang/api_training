@@ -4,6 +4,12 @@
 import requests
 import json
 import random
+import time
+
+def search_time():
+    t = time.localtime()
+    search_time = time.strftime("%Y/%m/%d %H:%M:%S", t)
+    return search_time
 
 url = "https://icanhazdadjoke.com/search"
 search = input("Search:")
@@ -12,14 +18,17 @@ response_text = json.loads(response.text)
 results = response_text["results"]
 total_jokes = response_text["total_jokes"]
 
-if results != []:
-    joke = random.choice(results)["joke"]
-    print(f"Total jokes:{total_jokes}")
-    print(f"One of them:\n{joke}")
-    with open("jokes.txt","a") as txt:
+with open("jokes.txt","a") as txt:
+    if results != []:
+        joke = random.choice(results)["joke"]
+        print(search_time())
+        print(f"Total jokes:{total_jokes}")
+        print(f"One of [{search}]'s joke:\n{joke}")
+        txt.write(f"{search_time()}\n")
         txt.write(f"Total jokes:{total_jokes}\n")
-        txt.write(f"One of them:\n{joke}\n")
-else:
-    print("No joke here")
-    with open("jokes.txt","a") as txt:
-        txt.write(f"Search[{search}]:No joke here\n")
+        txt.write(f"One of [{search}]'s joke:\n{joke}\n")
+    else:
+        print(search_time())
+        print(f"No [{search}]'s joke here!")
+        txt.write(f"{search_time()}\n")
+        txt.write(f"No [{search}]'s joke here!\n")
